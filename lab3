@@ -1,1 +1,294 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7d60cdf9-26d9-411b-8046-0d6b30d3b399",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Q"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "6c072ccc-ce6c-4a8d-8b7e-4e3ad5cc3399",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a password:  1234\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Access Denied\n"
+     ]
+    }
+   ],
+   "source": [
+    "password = input(\"Enter a password: \")\n",
+    "\n",
+    "if password == \"admin123\":\n",
+    "    print(\"Access Granted\")\n",
+    "else:\n",
+    "    print(\"Access Denied\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "e635aeb6-e515-4b54-8801-ba93ca9668ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter your age:  20\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Adult\n"
+     ]
+    }
+   ],
+   "source": [
+    "age = int(input(\"Enter your age: \"))\n",
+    "\n",
+    "if age < 13:\n",
+    "    print(\"Child\") # [cite: 10]\n",
+    "elif 13 <= age <= 19:\n",
+    "    print(\"Teen\") # [cite: 11]\n",
+    "elif 20 <= age <= 59:\n",
+    "    print(\"Adult\") # [cite: 14]\n",
+    "else:\n",
+    "    print(\"Senior\") # [cite: 13]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "736790f1-78a9-47b4-ac4c-e5189d9f65f2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Positive\n",
+      "The number is between 10 and 50 (inclusive).\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = float(input(\"Enter a number: \"))\n",
+    "\n",
+    "# التحقق من كونه موجباً\n",
+    "if num > 0:\n",
+    "    print(\"Positive\") # [cite: 21]\n",
+    "else:\n",
+    "    print(\"Not Positive\") # [cite: 22]\n",
+    "\n",
+    "# التحقق من النطاق (10-50)\n",
+    "if 10 <= num <= 50:\n",
+    "    print(\"The number is between 10 and 50 (inclusive).\") # [cite: 23]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9600fef2-6d4e-4089-96ef-8da6a0b160af",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a colour name (red, yellow, green):  yellow\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Slow down\n"
+     ]
+    }
+   ],
+   "source": [
+    "color = input(\"Enter a colour name (red, yellow, green): \").lower()\n",
+    "\n",
+    "if color != \"\": # التأكد أن الإدخال ليس فارغاً [cite: 27]\n",
+    "    match color: # [cite: 26]\n",
+    "        case \"red\":\n",
+    "            print(\"Stop\")\n",
+    "        case \"yellow\":\n",
+    "            print(\"Slow down\")\n",
+    "        case \"green\":\n",
+    "            print(\"Go\")\n",
+    "        case _:\n",
+    "            print(\"Invalid color\")\n",
+    "else:\n",
+    "    print(\"Input cannot be empty\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "f9d5dd22-9b74-4bb3-88cb-0e1fca23e6ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Menu:\n",
+      "1. Addition\n",
+      "2. Subtraction\n",
+      "3. Multiplication\n",
+      "4. Division\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Choose an option (1-4):  4\n",
+      "Enter first number:  1\n",
+      "Enter second number:  2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Result: 0.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Menu:\")\n",
+    "print(\"1. Addition\") # [cite: 32]\n",
+    "print(\"2. Subtraction\") # [cite: 33]\n",
+    "print(\"3. Multiplication\") # [cite: 34]\n",
+    "print(\"4. Division\") # [cite: 35]\n",
+    "\n",
+    "choice = input(\"Choose an option (1-4): \")\n",
+    "num1 = float(input(\"Enter first number: \"))\n",
+    "num2 = float(input(\"Enter second number: \"))\n",
+    "\n",
+    "match choice: # [cite: 37]\n",
+    "    case \"1\":\n",
+    "        print(f\"Result: {num1 + num2}\")\n",
+    "    case \"2\":\n",
+    "        print(f\"Result: {num1 - num2}\")\n",
+    "    case \"3\":\n",
+    "        print(f\"Result: {num1 * num2}\")\n",
+    "    case \"4\":\n",
+    "        if num2 != 0:\n",
+    "            print(f\"Result: {num1 / num2}\")\n",
+    "        else:\n",
+    "            print(\"Cannot divide by zero\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "26c9f8ea-62e2-4daa-8d99-dab5e70cd58b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter student score:  80\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Status: Passed\n",
+      "Good job!\n"
+     ]
+    }
+   ],
+   "source": [
+    "score = float(input(\"Enter student score: \"))\n",
+    "\n",
+    "# تحديد النجاح أو الرسوب [cite: 41]\n",
+    "if score >= 60:\n",
+    "    print(\"Status: Passed\")\n",
+    "else:\n",
+    "    print(\"Status: Failed\")\n",
+    "\n",
+    "# تعيين الدرجة [cite: 41]\n",
+    "if score >= 90:\n",
+    "    grade = \"A\"\n",
+    "elif score >= 80:\n",
+    "    grade = \"B\"\n",
+    "elif score >= 70:\n",
+    "    grade = \"C\"\n",
+    "else:\n",
+    "    grade = \"F\"\n",
+    "\n",
+    "# رسالة بناءً على الدرجة باستخدام match [cite: 42]\n",
+    "match grade:\n",
+    "    case \"A\":\n",
+    "        print(\"Excellent work!\")\n",
+    "    case \"B\":\n",
+    "        print(\"Good job!\")\n",
+    "    case \"C\":\n",
+    "        print(\"You passed.\")\n",
+    "    case \"F\":\n",
+    "        print(\"Better luck next time.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2a06c995-9a17-43f7-97bf-e93a84d9dc03",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "anaconda-2025.12-py312",
+   "language": "python",
+   "name": "conda-env-anaconda-2025.12-py312-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
 
